@@ -1,0 +1,73 @@
+
+{% extends 'userr/userr_base.html' %}
+{% load static %}
+{% block content %}
+        {% if messages %}
+<script>
+alert("{{ messages }}")
+</script>
+    {% endif %}
+
+  <!--/ Intro Single star /-->
+  <section class="intro-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-8">
+          <div class="title-single-box">
+            <h1 class="title-single" style="margin-top: 50px;">Service..</h1>
+{#            <span class="color-text-a">Aut voluptas consequatur unde sed omnis ex placeat quis eos. Aut natus officia corrupti qui autem fugit consectetur quo. Et ipsum eveniet laboriosam voluptas beatae possimus qui ducimus. Et voluptatem deleniti. Voluptatum voluptatibus amet. Et esse sed omnis inventore hic culpa.</span>#}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--/ Intro Single End /-->
+
+  <!--/ Contact Star /-->
+  <section class="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-map box">
+
+          </div>
+        </div>
+        <div class="col-sm-12 section-t8">
+          <div class="row">
+            <div class="col-md-7">
+              <div style=" border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;">
+   <form method="post" action=""  enctype="multipart/form-data">
+       {% csrf_token %}
+
+
+  <label for="lname">Add Service</label>
+    <input type="text" id="lname" name="services" style="width: 100%;height: 200px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;" placeholder="Service..">
+
+
+
+
+    <input type="submit" style="width: 100%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;border-radius: 4px;cursor: pointer;" value="Submit">
+{#       <a href="forgot_password"  ><h4 style="color:limegreen">Forgot Password</h4></a>#}
+  </form>
+</div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+  <!--/ Contact End /-->
+
+  <!--/ footer Star /-->

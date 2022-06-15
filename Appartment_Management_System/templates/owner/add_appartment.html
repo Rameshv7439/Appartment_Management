@@ -1,0 +1,167 @@
+            {% extends 'owner/owner_base.html' %}
+{% load static %}
+{% block content %}
+    {% if message %}
+<script>
+alert("{{ message }}")
+</script>
+{% endif %}
+
+      <section class="intro-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-8">
+          <div class="title-single-box">
+            <h1 class="title-single" style="margin-top: 50px;">Add Appartment</h1>
+{#            <span class="color-text-a">Aut voluptas consequatur unde sed omnis ex placeat quis eos. Aut natus officia corrupti qui autem fugit consectetur quo. Et ipsum eveniet laboriosam voluptas beatae possimus qui ducimus. Et voluptatem deleniti. Voluptatum voluptatibus amet. Et esse sed omnis inventore hic culpa.</span>#}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+      <section class="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-map box">
+
+          </div>
+        </div>
+        <div class="col-sm-12 section-t8">
+          <div class="row">
+            <div class="col-md-7">
+              <div style=" border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;">
+   <form method="post" action=""  enctype="multipart/form-data"  >
+       {% csrf_token %}
+    <label for="fname">Appartment Name</label>
+    <input type="text" id="fname" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;" name="name" placeholder="Appartment  name.."  required >
+
+    <label for="lname">Contact Details</label>
+    <input type="text" id="lname" name="contact_details" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;" placeholder="Contact details.." required>
+     <label for="lname">Location</label>
+    <input type="text" id="lname" name="location" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;" placeholder="Your location.."required>
+
+
+
+      <label for="lname">Appartment Type</label><br>
+        <select name="appartment_type" id="iname" type="text"  >
+  <option value="Flat">Flat</option>
+  <option value="House">House</option>
+  <option value="Paying Guest">Paying Guest</option>
+   <option value="Rooms">Rooms</option>
+   <option value="Hotel">Hotel</option>
+
+{#  <option value="audi">Audi</option>#}
+</select><br><br>
+
+<label for="lname"> User Type</label><br>
+        <select name="type" id="iname" type="text"  >
+  <option value="Family">Family</option>
+  <option value="Single Women">Single Women</option>
+  <option value="Single Men">Single Men</option>
+   <option value="Students">Students</option>
+   <option value="Hotel">Couple of Workers</option>
+
+{#  <option value="audi">Audi</option>#}
+</select><br><br>
+
+  <label for="lname">Image</label>
+    <input type="file" id="lname" name="image" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;" placeholder="Your  appartment image.." required>
+  <label for="lname">Image</label>
+    <input type="file" id="lname" name="image1" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;" placeholder="Your  appartment image.." required>
+   <label for="lname">Image</label>
+    <input type="file" id="lname" name="image2" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;" placeholder="Your  appartment image.." required>
+   <label for="lname">Image</label>
+    <input type="file" id="lname" name="image3" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;" placeholder="Your  appartment image.." required>
+    <label for="lname">Image</label>
+    <input type="file" id="lname" name="image4" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;" placeholder="Your  appartment image.." required>
+
+  <label for="fname">Rent</label>
+    <input type="text" id="fname" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;" name="rent" placeholder="Rent.."  required >
+   <label for="fname">Number of Rooms</label>
+    <input type="text" id="fname" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;" name="rooms" placeholder="Number of rooms.."  required >
+     <label for="fname">Number of Bathrooms</label>
+    <input type="text" id="fname" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;" name="bath_rooms" placeholder="Number of bath rooms.."  required >
+    <input type="submit" style="width: 100%;background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;border-radius: 4px;cursor: pointer;" value="Submit">
+  </form>
+</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock %}

@@ -1,0 +1,68 @@
+ {% extends 'owner/owner_base.html' %}
+{% load static %}
+{% block content %}
+    {% if message %}
+<script>
+alert("{{ message }}")
+</script>
+{% endif %}
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>View Feedback...</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+
+    <!-- ================ contact section start ================= -->
+    <section class="contact-section">
+            <div class="container">
+                <div class="d-none d-sm-block mb-5 pb-4">
+
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="contact-title">Feedback</h2>
+                    </div>
+                    <div class="col-lg-8">
+                           <table class="table table-bordered table-striped table-hover" style="width: 900px;">
+
+<th class="info" style="background-color: lightgreen;">Name</th>
+<th class="info" style="background-color: lightgreen;">Feedback</th>
+<th class="info" style="background-color: lightgreen;">Replay</th>
+
+
+
+{% for dri in feedba  %}
+
+<tr>
+    <td>{{ dri.user.first_name}}</td>
+    <td>{{ dri.feedback}}</td>
+   <td>{{ dri.reply }}</td>
+
+
+</tr>
+
+    {% endfor %}
+</table>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
+    <!-- ================ contact section end ================= -->
+
+
+    <!-- footer_start  -->
